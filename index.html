@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="index.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<center>
+			<div id="pageContent">
+				<br/>
+				<h2>Personalize your Stremio Experience</h2>
+				<br/>
+				Choose any number of popular lists and interests then click "Generate"
+				<br/>
+				<br/>
+				<br/>
+				<form id="mainForm" action="https://stremio-catalog-builder.now.sh/generate">
+					<div class="row">
+						<div class="column" id="lists">
+							<div class="titlebox">
+								<h3 id="listtitle">Lists</h3>
+							</div>
+							<div class="littleboxes"></div>
+						</div>
+						<div class="column" id="interests" style="border-left: 2px solid rgb(255,255,255)">
+							<div class="titlebox">
+								<h3 id="inttitle">Interests</h3>
+								<select id="intselect"></select>
+							</div>
+							<div class="littleboxes"></div>
+					</div>
+					</div>
+				</form>
+				<div id="submitButton">Generate</div>
+			</div>
+		</center>
+
+		<script>
+			$(document).ready(init)
+		</script>
+
+	</body>
+</html>

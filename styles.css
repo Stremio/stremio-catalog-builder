@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	min-height: 300px;
+	background-color:rgba(0,0,0,0.1);
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column p {
+	background-color:rgba(0,0,0,0.1);
+	padding: 10px;
+	margin: 7px 0;
+	text-align: left;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.column p:hover {
+	background-color:rgba(255,255,255,0.5);
+}
+
+#inttitle {
+	margin-bottom: 5px;
+}
+
+.titlebox {
+	height: 52px;
+}
+
+.littleboxes {
+	height: 248px;
+	overflow-x: scroll;
+}
+
+.opt {
+	margin-right: 7px;
+}
+
+#submitButton {
+	color: #FFF;
+	background-color: #0095ff;
+	padding: 15px;
+	width: 150px;
+	font-size: 20px;
+	margin: 30px 0;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	opacity: 0.8;
+}
+
+#submitButton:hover {
+	background-color: #07c;
+}
+
+#catalogUrl {
+	background-color: rgba(0,0,0,0.1);
+	padding: 15px;
+	display: inline-block;
+}
+
+#addonImg {
+	max-width: 90%;
+}

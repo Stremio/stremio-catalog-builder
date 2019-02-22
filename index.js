@@ -161,6 +161,7 @@ function showInterest(key) {
 		$(this).css('display','none')
 	})
 	$('.' + key).css('display','block')
+	$('#interests').find('.littleboxes').scrollTop(0)
 }
 
 function init() {
@@ -207,13 +208,6 @@ function init() {
 				option.prop('checked', true)
 		}
 	})
-
-	$.fn.replaceWithCb = function(replace, callback){
-		var ret = $.fn.replaceWith.call(this, replace)
-		if (typeof callback === 'function')
-			callback.call(ret)
-		return ret
-	}
 
 	$("#submitButton").click(function() {
 		var form = $("#mainForm")

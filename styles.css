@@ -51,7 +51,7 @@
 	margin-right: 7px;
 }
 
-#submitButton {
+.button {
 	color: #FFF;
 	background-color: #0095ff;
 	padding: 15px;
@@ -66,16 +66,12 @@
 	opacity: 0.8;
 }
 
-#submitButton:hover {
+.button:hover {
 	background-color: #07c;
 }
 
-#catalogUrl {
-	background-color: rgba(0,0,0,0.1);
-	padding: 15px;
+#catalogButton {
+	width: 200px;
 	display: inline-block;
-}
-
-#addonImg {
-	max-width: 90%;
+	text-decoration: none;
 }

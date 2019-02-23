@@ -221,9 +221,12 @@ function init() {
 			data: form.serialize(),
 			success: function(data) {
 				if (data) {
-					if (data.collection)
-						$("#pageContent").html('<br/><br/><h2>Copy this URL:</h2><div id="catalogUrl">https://stremio-catalog-builder.now.sh/'+data.collection+'/collection.json</div><br/><br/>And paste it in Stremio as shown in this image:<br/><br/><img id="addonImg" src="https://user-images.githubusercontent.com/1777923/43146711-65a33ccc-8f6a-11e8-978e-4c69640e63e3.png">')
-					else if (data.err)
+					if (data.collection) {
+						$("#pageContent").html('<br/><br/><h2>Press to load new catalogs in Stremio:</h2><a id="catalogButton" class="button" href="stremio://stremio-catalog-builder.now.sh/'+data.collection+'/collection.json">Load Catalogs</a><br/><br/>This button will expire in 1 hour.')
+						setTimeout(function() {
+							$("#pageContent").html('<br/><br/><h2>Catalog link expired, please refresh the page</h2>')
+						}, 3600000)
+					} else if (data.err)
 						$("#pageContent").html('<br/><br/><h2>'+data.err+'</h2><br/><br/>')
 				} else
 					$("#pageContent").html('<br/><br/><h2>An unknown error occurred, please try again later</h2><br/><br/>')

@@ -222,7 +222,7 @@ function init() {
 			success: function(data) {
 				if (data) {
 					if (data.collection) {
-						$("#pageContent").html('<br/><br/><h2>Press to load new catalogs in Stremio:</h2><a id="catalogButton" class="button" href="stremio://stremio-catalog-builder.now.sh/'+data.collection+'/collection.json">Load Catalogs</a><br/><br/>This button will expire in 1 hour.')
+						$("#pageContent").html('<br/><br/><h2>Press to load new catalogs in Stremio:</h2><a id="catalogButton" class="button" href="stremio://cat-generator.now.sh/'+data.collection+'/grouped.json">Load Catalogs</a><br/><br/>This button will expire in 1 hour.')
 						setTimeout(function() {
 							$("#pageContent").html('<br/><br/><h2>Catalog link expired, please refresh the page</h2>')
 						}, 3600000)
